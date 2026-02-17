@@ -5,7 +5,7 @@
 %[text] ## Introduction
 %[text] This file is run automatically when the Simulink model is opened. (see the PreLoadFcn callback).
 %[text] Please note that the file runs additional scripts/functions as follows:
-%[text] - `exercise02_get_vehicle_paramters`: defines the `nrotor_vehicle` parameters and the initial conditions.
+%[text] - `exercise02_get_vehicle_parameters`: defines the `nrotor_vehicle` parameters and the initial conditions.
 %[text] - `exercise02_get_default_controller`: defines LQR parametes for different controller rates.
 %[text] - `exercise02_compute_equilibrium_thrusts.m` (function).
 %[text] - `exercise02_get_reference_specification`; defines the reference signal that should be tracked by the controller. \
@@ -23,9 +23,9 @@ clc;
 %[text] 1. The origin of the body frame is at the center of mass of the N-rotor vehicle.
 %[text] 2. The thrusts from the propellers are all aligned with the positive z-axis of the body frame.
 %[text] 3. Gravity is aligned with the negative z-axis of the inertial frame. \
-%[text] The student should open the file "get\_vehicle\_paramters.m" and specify the N-rotor vehicle design as instructed in that file
-exercise02_get_vehicle_paramters;
-%[text] The exercise02\_`get_vehicle_paramters` script puts the following varibles into the workspace so that they can be used in the Simulink model:
+%[text] The student should open the file "get\_vehicle\_parameters.m" and specify the N-rotor vehicle design as instructed in that file
+exercise02_get_vehicle_parameters;
+%[text] The exercise02\_`get_vehicle_parameters` script puts the following varibles into the workspace so that they can be used in the Simulink model:
 %[text] - `g`
 %[text] - `g_vec`
 %[text] - `nrotor_vehicle.mass_true`
