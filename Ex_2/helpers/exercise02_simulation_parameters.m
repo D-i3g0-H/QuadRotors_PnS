@@ -5,10 +5,10 @@
 %[text] ## Introduction
 %[text] This file is run automatically when the Simulink model is opened. (see the PreLoadFcn callback).
 %[text] Please note that the file runs additional scripts/functions as follows:
-%[text] - `exercise01_get_vehicle_paramters`: defines the `nrotor_vehicle` parameters and the initial conditions.
-%[text] - `exercise01_get_default_controller`: defines LQR parametes for different controller rates.
-%[text] - `exercise01_compute_equilibrium_thrusts.m` (function).
-%[text] - `exercise01_get_reference_specification`; defines the reference signal that should be tracked by the controller. \
+%[text] - `exercise02_get_vehicle_paramters`: defines the `nrotor_vehicle` parameters and the initial conditions.
+%[text] - `exercise02_get_default_controller`: defines LQR parametes for different controller rates.
+%[text] - `exercise02_compute_equilibrium_thrusts.m` (function).
+%[text] - `exercise02_get_reference_specification`; defines the reference signal that should be tracked by the controller. \
 %[text] This will place all the necessary parameters for the simulation in the MATLAB workspace. The parameters are then accessed during runtime of the model.
 %[text] Note: If you want to change the parameters for the simulation, you have to make sure that the model is already loaded before altering values. Otherwise your changes will be overwritten.
 %%
@@ -24,8 +24,8 @@ clc;
 %[text] 2. The thrusts from the propellers are all aligned with the positive z-axis of the body frame.
 %[text] 3. Gravity is aligned with the negative z-axis of the inertial frame. \
 %[text] The student should open the file "get\_vehicle\_paramters.m" and specify the N-rotor vehicle design as instructed in that file
-exercise01_get_vehicle_paramters;
-%[text] The `exercise01_get_vehicle_paramters` script puts the following varibles into the workspace so that they can be used in the Simulink model:
+exercise02_get_vehicle_paramters;
+%[text] The exercise02\_`get_vehicle_paramters` script puts the following varibles into the workspace so that they can be used in the Simulink model:
 %[text] - `g`
 %[text] - `g_vec`
 %[text] - `nrotor_vehicle.mass_true`
@@ -46,8 +46,8 @@ exercise01_get_vehicle_paramters;
 %%
 %[text] ## Default Linear Quadratic Regulator (LQR) Controller
 %[text] For the purposes of the template, an LQR controller feedback matrix is hard-coded and should stabilise most N-rotor vehicle layouts.
-exercise01_get_default_controller;
-%[text] The "exercise01\_get\_default\_controller" script puts the following varibles into the workspace so that they can be used here:
+exercise02_get_default_controller;
+%[text] The "exercise02\_get\_default\_controller" script puts the following varibles into the workspace so that they can be used here:
 %[text] - `K_lqr_full_state.continous_time`
 %[text] - `K_lqr_full_state.discrete_time_20Hz`
 %[text] - `K_lqr_full_state.discrete_time_50Hz`
@@ -65,13 +65,13 @@ K_lqr_full_state = K_lqr.continous_time;
 % this line could be used to overwrite the standard controller ;)
 %%
 %[text] ## Computation of Equilibrium Thrusts
-%[text] The "exercise01\_compute\_equilibrium\_thrusts" function computes and returns the equilibrium thrusts as a column vector of length N. Thus the variable "nrotor\_vehicle\_equilibrium\_thrust" is in the workspace and can be used in the Simulink model.
-nrotor_vehicle.equilibrium_thrust = exercise01_compute_equilibrium_thrusts(nrotor_vehicle.layout_for_controller,nrotor_vehicle.mass_for_controller,g);
+%[text] The "exercise02\_compute\_equilibrium\_thrusts" function computes and returns the equilibrium thrusts as a column vector of length N. Thus the variable "nrotor\_vehicle\_equilibrium\_thrust" is in the workspace and can be used in the Simulink model.
+nrotor_vehicle.equilibrium_thrust = exercise02_compute_equilibrium_thrusts(nrotor_vehicle.layout_for_controller,nrotor_vehicle.mass_for_controller,g);
 %%
 %[text] ## Reference Signal for (x,y,z,yaw)
-%[text] The student can open the file "exercise01\_get\_reference\_specification.m" and follow the comments there to adjust the reference signal.
-exercise01_get_reference_specification;
-%[text] The "exercise01\_get\_reference\_specification.m" script puts the following varibles into the workspace so that they can be used in the Simulink model:
+%[text] The student can open the file "exercise02\_get\_reference\_specification.m" and follow the comments there to adjust the reference signal.
+exercise02_get_reference_specification;
+%[text] The "exercise02\_get\_reference\_specification.m" script puts the following varibles into the workspace so that they can be used in the Simulink model:
 %[text] - `reference.step_xyz_yaw`
 %[text] - `reference.step_period`
 %[text] - `reference.sine_amplitude_xyz_yaw`

@@ -3,7 +3,7 @@
 %[text] Open the PS\_Quadcopter\_Lab App and load the template Simulink model from this exercise
 %[text] ![](text:image:524b)
 PS_Quadcopter_Lab_app
-%modifies file exercise02_get_reference_specification.m 
+%modifies file exercise03_get_reference_specification.m 
 %reference.step_xyz_yaw= [0.5; 0.5; 0.5; 20*deg2rad];
 %[text] In the panel for Exercise 3, change the yaw step to 20 degrees and simulate the model.
 %changes the variable named “reference step xyz yaw”.
@@ -11,11 +11,13 @@ PS_Quadcopter_Lab_app
 %reference.step_xyz_yaw= [0.5; 0.5; 0.5; 90*deg2rad];
 %[text] How does the $(x, y)$ tracking performance differ?
 %%
+%[text] Note: To prevent unintended changes to your model, please close the app before continuing.
+%%
 %[text] ## Task
 %[text] The goal of this task is to derive and implement a simple rotation of the controller errors into the body frame and remedy the $(x, y)$ tracking performance.
 %[text] - Assuming the roll and pitch angles are zero, derive the transformation of the $(p\_x, p\_y)$ and $(\\dot{p}\_x, \\dot{p}\_y)$ errors into the body frame. Implement this transformation in the `“outer control loop”` sub-system of your Simulink model in the MATLAB Function block named `“rotate xy inertial to body”`. \
 % implement your solution in the following MATLAB function block
-open_system("exercise02_simulation_model_template/Controller/outer control loop/MATLAB Function",'tab')
+open_system("exercise03_simulation_model_template/Controller/outer control loop/MATLAB Function",'tab')
 %[text] Validate your solution using the App. Does this transformation sufficiently remedy the $(x, y)$ tracking performance? For all types of yaw references?
 %[text] Is the assumption of zero roll and pitch angle reasonable? Is there a need for, and/or benefit from, a transformation to the $p\_z$ and $\\dot{p}\_z$ error also?
 

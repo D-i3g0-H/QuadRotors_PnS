@@ -14,11 +14,11 @@
 %[text] %                   == [ zeros(N,1) ; mass*g ; 0 ; 0 ; 0 ]
 %[text] ```
 %[text] Task: change the function so that the equilibrium thrust is computed using the inverse of the layout matrix $M\_{layout$ instead.
-function equilibrium_thrust = exercise01_compute_equilibrium_thrusts(layout,mass,g)
+function equilibrium_thrust = exercise02_compute_equilibrium_thrusts(layout,mass,g)
 %[text] ```matlabCodeExample
 %[text] % INPUT ARGUMENTS:
 %[text] % >> "layout"   The layout of the N-rotor vehicle, as defined in the
-%[text] %               "exercise01_get_vehicle_paramters.m" file
+%[text] %               "exercise02_get_vehicle_paramters.m" file
 %[text] % >> "mass"     The total mass of the vehicle, in [kilograms]
 %[text] % >> "g"        The acceleration due to gravity, in [meters/second^2]
 %[text] 
@@ -49,7 +49,7 @@ equilibrium_thrust = temp_solution(1:nu,1);
 % Student solution to be added here:
 %  equilibrium_thrust=...
 %%
-end % END OF: "function [...] = exercise01_compute_equilibrium_thrusts(...)"
+end % END OF: "function [...] = exercise02_compute_equilibrium_thrusts(...)"
 
 %[appendix]{"version":"1.0"}
 %---

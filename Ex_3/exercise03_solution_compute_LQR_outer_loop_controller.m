@@ -8,7 +8,7 @@
 %
 %% --------------------------------------------------------------------- %%
 %% function [...] = exercise02_solution_compute_LQR_outer_loop_controller(...)
-function [ K_lqr_continuous_time , K_lqr_discrete_time ] = exercise02_solution_compute_LQR_outer_loop_controller()
+function [ K_lqr_continuous_time , K_lqr_discrete_time ] = exercise03_solution_compute_LQR_outer_loop_controller()
 
     % Gravitational constant:
     g = 9.81;

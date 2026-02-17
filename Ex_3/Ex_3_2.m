@@ -6,7 +6,7 @@
 %[text] ## Task B
 %[text] So far the outer loop controller has been stabilising the system using a design that is based on the Linear Quadratic Regulator (LQR) method. 
 %[text] The goal of this task is to replace the parts of the LQR contoller in the outer loop responsible for **altitude** and **yaw** control with **PID controller blocks** (as shown in Figure 1).
-%[text] Tune the PID gains for both the ALTITUDE AND YAW to achieve zero steady state error. Start by applying the Zeiggler Nichols method \[[https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols\_method](https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols_method)\] to obtain intial gain values, then and then manually fine-tune your parameters to achieve satisfactory control performance.
+%[text] Tune the PID gains for both the ALTITUDE AND YAW to achieve zero steady state error. Start by applying the Ziegler Nichols method \[[https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols\_method](https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols_method)\] to obtain initial gain values, and then manually fine-tune your parameters to achieve satisfactory control performance.
 %[text] **Note:** 
 %[text] When tuning the parameters to determine the **ultimate gain** Ku, ensure that the actuators do not saturate. Actuator saturation can lead to misleadingly large values of Ku. When identifying Ku, aim to find a proportional gain that produces **sustained oscillations** in the closed-loop response **without** driving the actuators into saturation
 %[text] Use the following naming conventions for the respective gain blocks:
@@ -17,15 +17,17 @@
 %[text] ![](text:image:38fa)
 %[text] Figure 2: Replace the LQR gain block with the PID gain block as shown in Figure 1
 % Open the particular system for the altitude controller in simulink
-open_system("exercise02_simulation_model_template/Controller/outer control loop",'tab')
-
-% Tune the controller parameters to achieve zero steady state error and to
-% minimize overshoot in the system response.
+open_system("exercise03_simulation_model_template/Controller/outer control loop",'tab')
+%[text] Once done with the implementation, please save your model to prevent loss of your changes when optimizing the gains with the app.
+% Tune the controller parameters to achieve zero steady state error and to minimize overshoot in the system response.
+PS_Quadcopter_Lab_app
+%%
 %[text] Once you have a properly tuned altitude controller, proceed to tuning the yaw controller. Use the following naming conventions for the respective gain blocks for the YAW Controller:
 %[text] - **Proportional Gain:** `P-gain Yaw`
 %[text] - **Derivative Gain:** D`-gain Yaw`
 %[text] - **Integral Gain:** I`-gain Yaw` \
-open_system("exercise02_simulation_model_template/Controller/outer control loop",'tab')
+open_system("exercise03_simulation_model_template/Controller/outer control loop",'tab')
+%[text] Again please save your model once you are done with the implementation of the controller.
 %[text] Can you use the gains of the Linear Quadratic Regulator (LQR) controller included in the template Simulink model to provide reasonable starting gains for your PID controller, from which you can then perform some fine-tuning?
 %open the simulink template with LQR gains
 %[text] 
