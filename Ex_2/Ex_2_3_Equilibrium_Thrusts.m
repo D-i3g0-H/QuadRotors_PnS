@@ -1,7 +1,7 @@
 %[text] ## 2.3 Computation of Feed-Forward Thrusts
-%[text] The goal of this task is to derive and implement a computation of the feed-forward (equilibrium) thrusts.
+%[text] The goal of this task is to derive and implement a computation of the feed-forward (equilibrium) thrusts. For your reference, the below figure captures the basic idea of this concept.
 %[text] ![](text:image:3a33)
-%[text] Recall the 4 actuators defined in the script, namely the total thrust force $f\_{total}$, and the torque about each axis of the body frame $(\\tau\_x^{(B)},\\tau\_y^{(B)}, \\tau\_z^{(B)})$. Derive all the possible state and input combinations that are equilibrium points of the non-linear, continuous-time equations of motions.
+%[text] Recalling the 4 actuators defined in the script, namely the total thrust force $f\_{total}$, and the torque about each axis of the body frame $(\\tau\_x^{(B)},\\tau\_y^{(B)}, \\tau\_z^{(B)})$, derive all the possible state and input combinations that are equilibrium points of the non-linear, continuous-time equations of motions.
 %[text] ```
 %[text] i.e. mention the conditions under which the quad-copter is hoovering but not moving around.
 %[text] ```
@@ -11,10 +11,10 @@
 %[text] The motor thrusts required to produce a set of actuations can thus be computed using the (pseudo) inverse of $M\_{layout}$.
 %[text] Implement the pseudo inverse of $M\_{layout}$ and use it for computing the equilibrium thrusts ([exercise01\_compute\_equilibrium\_thrusts.m](file:exercise01_compute_equilibrium_thrusts.m)).
 %[text] ```
-%[text] Open the file exercise01_compute_equilibrium_thrusts.m, delete the code that is already there and give your solution...
+%[text] Open the file exercise01_compute_equilibrium_thrusts.m, and override the code that is already there (i.e. add your solution after the one that is already present).
 %[text] ```
 %%
-%[text] Validate the correct behavior of the new controller:
+%[text] Validate the correct behavior of the new controller (make sure that the correct model is loaded):
 load_system('exercise01_simulation_model_template_R2025b')   
 sim('exercise01_simulation_model_template_R2025b')
 sim_out = get_sim_data(logsout);

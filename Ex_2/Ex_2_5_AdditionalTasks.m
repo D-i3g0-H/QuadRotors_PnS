@@ -3,17 +3,9 @@
 %[text] - This is implemented most easily by using the "Random Number" block (found in the "Sources" category) in Simulink to inject a vector with independent samples.
 %[text] - The measurement noise should be added in a manner that allows you to quickly select between simulating the vehicle with and without noise. \
 %[text] ```
-%[text] provide your solution in the Simulink Model
+%[text] provide your solution in the Simulink Model. Feel free to run the model via the app to visualize the results.
 %[text] ```
 %[text] How is the step change tracking performance affected by the amplitude of the added noise? Is the vehicle's performance more sensitive to noise on particular measurements?
-% set the noise parameters using set_param
-
-
-% Run simulation with different amount of noise on all the states
-load_system('exercise01_simulation_model_template_R2025b')   
-sim('exercise01_simulation_model_template_R2025b')
-sim_out = get_sim_data(logsout);
-plot_sim_data(sim_out)
 %[text] Is zero-mean white noise a realistic assumption? What other types of noise might exist for particular measurements.
 %[text] ```
 %[text] Student explanation
