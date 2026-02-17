@@ -3,10 +3,8 @@
 %[text] Open the PS\_Quadcopter\_Lab App and load the template Simulink model from this exercise
 %[text] ![](text:image:524b)
 PS_Quadcopter_Lab_app
-
 %modifies file exercise02_get_reference_specification.m 
 %reference.step_xyz_yaw= [0.5; 0.5; 0.5; 20*deg2rad];
-
 %[text] In the panel for Exercise 3, change the yaw step to 20 degrees and simulate the model.
 %changes the variable named “reference step xyz yaw”.
 %[text]  Next, provide a 90 degree step change for yaw and simulate.

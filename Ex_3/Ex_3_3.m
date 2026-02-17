@@ -14,15 +14,25 @@
 %[text] You will need to choose the Q and R cost function matrices to achieve the desired flight performance of your N-rotor vehicle. The infinite-horizon LQR cost function is:
 %[text] $J\_{\\infty}=\\int\\limits\_{0}^{\\infty} \\Bigl(x(t)^TQ \\ x(t) +u(t)^T R \\ u(t) \\Bigr) dt\n$
 %[text] For choosing the $Q$ and $R$ cost function matrices you should think about the units of the different elements of the state vector. For example, perhaps you wish to penalise a 10 centimeter deviation in x position the same amount as a 5 degree deviation in yaw.
-% Definition of Q and R
-%[text] Use the MATLAB functions `care` and `dare` to compute solutions for the continuous and discrete time algebraic Riccati equation respectively. Read the help documentation to be sure you understand what these functions compute.
-%[text] Note: Both the `care` and `dare` function return a state-feedback gain matrix, be careful of the sign convention if you use this matrix.
-% -> will give K's
-%[text] To convert the continuous-time system matrices to discrete-time system matrices use the MATLAB function c2d, specifying zero order hold as the discretisation method.
-% use c2d to convert them?
+%[text] Q is the **State Penalty Matrix**. It penalizes deviations of the state vector from the equilibrim point. A larger value in a diagonal entry of QQQ means the controller works harder to keep that state close to zero; a smaller value means that state is less important.
+%[text] R is the **Control Effort Penalty Matrix (Actuator effor)**. It penalizes the magnitude of the control input. A larger value in R makes the controller use less actuator effort (more conservative control), while a smaller value allows more aggressive control actions.
+%[text] Observe the behaviour of the drone and choose values of **Q and R** that produce LQR gains resulting in stable, responsive, and efficient flight.
+%Use the MATLAB functions care and dare to compute solutions for the continuous and discrete 
+% time algebraic Riccati equation respectively. Read the help documentation to be sure you understand what these functions compute.
+% Note: Both the care and dare function return a state-feedback gain matrix, be careful of the sign convention if you use this matrix. 
+% To convert the continuous-time system matrices to discrete-time system matrices use the MATLAB %function c2d, 
+% specifying zero order hold as the discretisation method.
+edit exercise02_solution_compute_LQR_outer_loop_controller
 %%
-%[text] ## Implementation in Simulink
-%[text] Where does this has to be added? -\> image?
+[ ~ , K_lqr_discrete_time ] = exercise02_solution_compute_LQR_outer_loop_controller();
+%%
+%[text] The LQR gains for **X** and **Y** are contained in the LQR gain matrix block named **LQR gain matrix for (x,y)**. Enter the gain values obtained from your LQR computation into this gain block, then **save the Simulink model** and **reload it in the app**.
+%[text] Ensure that the gain variable is correctly defined and available in the **MATLAB Workspace**, so the block can access it during simulation.
+open_system("exercise02_simulation_model_template/Controller/outer control loop",'tab')
+%[text] 
+%%K_lqr.outer_loop = K_lqr_discrete_time;
+%%assignin('base', "K_lqr", K_lqr)
+
 
 %[appendix]{"version":"1.0"}
 %---
