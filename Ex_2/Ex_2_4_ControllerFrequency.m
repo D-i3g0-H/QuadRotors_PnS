@@ -4,8 +4,8 @@
 %%
 %[text] In Simulink, this is implemented most easily by adding "Rate Transition" or "Zero-Order Hold" blocks. Meaning to convert a continuous signal into a discretized one, add a rate transition block to the signal line.
 %[text] Open the corresponding subsystem in the Simulink drone model:
-load_system('exercise01_simulation_model_template_R2025b')
-open_system('exercise01_simulation_model_template_R2025b/Controller','tab')
+load_system('exercise02_simulation_model_template_R2025b')
+open_system('exercise02_simulation_model_template_R2025b/Controller','tab')
 %[text] Then add 2 rate transition blocks:
 %[text] - one to the sensor signal line and name it "SensorSampleRate" (note this is the signal called full state).
 %[text] - one in front of the controller LQR gain matrix and name it "Controller\_Pace". \

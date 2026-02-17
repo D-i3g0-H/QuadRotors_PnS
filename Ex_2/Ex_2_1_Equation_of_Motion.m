@@ -6,10 +6,10 @@
 %[text] ```
 %%
 %[text] ### 2.1.1 Implementation of the Equations of Motion using a MATLAB function block
-%[text] Now add the non-linear, continuous-time, equations of motion to the template N-rotor vehicle Simulink model provided. Use the "all-in-one-block" approach described in Section 3.1.3 of the course script to implement the EoM in the MATLAB function block of the template. Remember that all the variables needed to complete this task are specfied and described in [exercise01 get vehicle parameters.m](file:exercise01_get_vehicle_paramters.m).
+%[text] Now add the non-linear, continuous-time, equations of motion to the template N-rotor vehicle Simulink model provided. Use the "all-in-one-block" approach described in Section 3.1.3 of the course script to implement the EoM in the MATLAB function block of the template. Remember that all the variables needed to complete this task are specfied and described in [exercise02 get vehicle parameters.m](file:exercise02_get_vehicle_paramters.m).
 %[text] To open the Simulink model and access the MATLAB function block with the template, run this code section below:
-load_system('exercise01_simulation_model_template_R2025b')              
-open_system('exercise01_simulation_model_template_R2025b/N-rotor_vehicle_model/EoM_one_shot','tab')
+load_system('exercise02_simulation_model_template_R2025b')              
+open_system('exercise02_simulation_model_template_R2025b/N-rotor_vehicle_model/EoM_one_shot','tab')
 %[text] Further guidance on how to implement the equations is given in the template. For convenience, the full state definition and equations of motion are referred below.
 %[text] ![](text:image:142d)
 %%
@@ -17,7 +17,7 @@ open_system('exercise01_simulation_model_template_R2025b/N-rotor_vehicle_model/E
 %[text] Once you have implemented the EoM, confirm the equations have been correctly added to the Simulink model by observing the reference tracking performance.
 %[text] The code below will open your modified template model and display the behavior of the quad-copter with respect to a step response.
 %run a simulation of the implementation
-sim('exercise01_simulation_model_template_R2025b')
+sim('exercise02_simulation_model_template_R2025b')
 % the simulation will log outputs to the variable logsout
 % the helper function get_sim_data preprocesses the simulation outputs
 sim_out = get_sim_data(logsout);

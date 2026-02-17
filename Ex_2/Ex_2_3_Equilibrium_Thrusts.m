@@ -9,14 +9,14 @@
 %[text] For an N-rotor vehicle, the actuator and motor thrusts are related as:
 %[text] $\\left\[ \\begin{array}{l}\nf\_{total} \\\\ \\tau\_x^{(B)} \\\\ \\tau\_y^{(B)} \\\\ \\tau\_z^{(B)}\n\\end{array} \\right\] = \\underbrace{\\left\[ \\begin{array}{l} 1 & 1 & \\cdots & 1 \\\\ y\_1 & y\_2  & \\cdots & y\_N \\\\ -x\_1 & -x\_2 & \\cdots & -x\_N \\\\ c\_1 & c\_2 & \\cdots & c\_N \\end{array} \\right\] }\_{M\_{layout}}\n\\left\[ \\begin{array}{l}\nf\_1 \\\\ f\_2 \\\\ \\vdots \\\\ f\_N\n\\end{array} \\right\]\n$
 %[text] The motor thrusts required to produce a set of actuations can thus be computed using the (pseudo) inverse of $M\_{layout}$.
-%[text] Implement the pseudo inverse of $M\_{layout}$ and use it for computing the equilibrium thrusts ([exercise01\_compute\_equilibrium\_thrusts.m](file:exercise01_compute_equilibrium_thrusts.m)).
+%[text] Implement the pseudo inverse of $M\_{layout}$ and use it for computing the equilibrium thrusts ([exercise02\_compute\_equilibrium\_thrusts.m](file:exercise02_compute_equilibrium_thrusts.m)).
 %[text] ```
-%[text] Open the file exercise01_compute_equilibrium_thrusts.m, and override the code that is already there (i.e. add your solution after the one that is already present).
+%[text] Open the file exercise02_compute_equilibrium_thrusts.m, and override the code that is already there (i.e. add your solution after the one that is already present).
 %[text] ```
 %%
 %[text] Validate the correct behavior of the new controller (make sure that the correct model is loaded):
-load_system('exercise01_simulation_model_template_R2025b')   
-sim('exercise01_simulation_model_template_R2025b')
+load_system('exercise02_simulation_model_template_R2025b')   
+sim('exercise02_simulation_model_template_R2025b')
 sim_out = get_sim_data(logsout);
 plot_sim_data(sim_out)
 %%

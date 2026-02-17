@@ -16,7 +16,7 @@ PS_Quadcopter_Lab_app %[output:19d4db60]
 %[text] y_offset = y_baseline * layout_deviation * 0.01;
 %[text] 
 %[text] nrotor_vehicle.layout_for_controller = nrotor_vehicle.layout_true + repmat( [x_offset;y_offset;0.000] , 1 , size(nrotor_vehicle.layout_true,2));
-%[text] nrotor_vehicle.equilibrium_thrust = exercise01_compute_equilibrium_thrusts(nrotor_vehicle.layout_for_controller,nrotor_vehicle.mass_for_controller,g);
+%[text] nrotor_vehicle.equilibrium_thrust = exercise02_compute_equilibrium_thrusts(nrotor_vehicle.layout_for_controller,nrotor_vehicle.mass_for_controller,g);
 %[text] ```
 %%
 %[text] Make several runs using different mass deviations. Is the offset of the response linear in the mis-match?
