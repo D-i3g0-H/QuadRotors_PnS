@@ -9,8 +9,6 @@
 %%
 %[text] ## Task
 %[text] Use the linear system matrices to design an infinte-horizon LQR controller state-feedback matrix and implement this in the template Simulink model provided.
-% I guess there is something that has to be done with the equations systems
-% before we can calculate the LQR gains
 %[text] You will need to choose the Q and R cost function matrices to achieve the desired flight performance of your N-rotor vehicle. The infinite-horizon LQR cost function is:
 %[text] $J\_{\\infty}=\\int\\limits\_{0}^{\\infty} \\Bigl(x(t)^TQ \\ x(t) +u(t)^T R \\ u(t) \\Bigr) dt\n$
 %[text] For choosing the $Q$ and $R$ cost function matrices you should think about the units of the different elements of the state vector. For example, perhaps you wish to penalise a 10 centimeter deviation in x position the same amount as a 5 degree deviation in yaw.
@@ -22,13 +20,13 @@
 % Note: Both the care and dare function return a state-feedback gain matrix, be careful of the sign convention if you use this matrix. 
 % To convert the continuous-time system matrices to discrete-time system matrices use the MATLAB %function c2d, 
 % specifying zero order hold as the discretisation method.
-edit exercise02_solution_compute_LQR_outer_loop_controller
+edit exercise03_solution_compute_LQR_outer_loop_controller
 %%
-[ ~ , K_lqr_discrete_time ] = exercise02_solution_compute_LQR_outer_loop_controller();
+[ ~ , K_lqr_discrete_time ] = exercise03_solution_compute_LQR_outer_loop_controller();
 %%
 %[text] The LQR gains for **X** and **Y** are contained in the LQR gain matrix block named **LQR gain matrix for (x,y)**. Enter the gain values obtained from your LQR computation into this gain block, then **save the Simulink model** and **reload it in the app**.
 %[text] Ensure that the gain variable is correctly defined and available in the **MATLAB Workspace**, so the block can access it during simulation.
-open_system("exercise02_simulation_model_template/Controller/outer control loop",'tab')
+open_system("exercise03_simulation_model_template/Controller/outer control loop",'tab')
 %[text] 
 %%K_lqr.outer_loop = K_lqr_discrete_time;
 %%assignin('base', "K_lqr", K_lqr)

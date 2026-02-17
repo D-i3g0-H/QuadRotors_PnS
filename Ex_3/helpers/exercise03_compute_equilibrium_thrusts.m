@@ -1,4 +1,4 @@
-function equilibrium_thrust = exercise02_compute_equilibrium_thrusts(layout,mass,g)
+function equilibrium_thrust = exercise03_compute_equilibrium_thrusts(layout,mass,g)
 %  ---------------------------------------------------------------------  %
 %   EEEEE   QQQ   U   U  III  L      III  BBBB   RRRRI  III  U   U  M   M
 %   E      Q   Q  U   U   I   L       I   B   B  R   R   I   U   U  MM MM
