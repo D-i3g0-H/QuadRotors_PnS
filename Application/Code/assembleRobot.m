@@ -15,10 +15,10 @@ function robot=assembleRobot(axs,out)
     % stlwrite(tri1,'wire_holder v5.stl');
     
     %define ref frame
-    robot{1}.component=stlcomponent(axs, out.position, out.angle, "Frame.stl",'green', true); %need stl file
-    robot{2}.component=stlcomponent(axs, out.position, out.angle, "Arms.stl",'white', false); %need stl file
-    robot{3}.component=stlcomponent(axs, out.position, out.angle, "Motors.stl",'cyan', false); %need stl file
-    robot{4}.component=stlcomponent(axs, out.position, out.angle, "Propellers.stl",'white', false); %need stl file
+    robot{1}.component=stlcomponent(axs, out.position, out.angle, "Frame.stl",[0.4 0.8 0.4], true); %need stl file
+    robot{2}.component=stlcomponent(axs, out.position, out.angle, "Arms.stl",[0.6 0.6 0.6], false); %need stl file
+    robot{3}.component=stlcomponent(axs, out.position, out.angle, "Motors.stl",[0.5 0.5 0.5], false); %need stl file
+    robot{4}.component=stlcomponent(axs, out.position, out.angle, "Propellers.stl",[0.7 0.7 0.7], false); %need stl file
 
     %
 
