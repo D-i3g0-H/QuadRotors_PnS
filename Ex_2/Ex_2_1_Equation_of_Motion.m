@@ -2,7 +2,7 @@
 %[text] The following steps are a guideline for developing the template Simulink model provided into a high-fidelity N-rotor vehicle simulation that will allow you to assess the empirical-stability and performance of a controller without damaging your real-world vehicle.
 %[text] Before working in Simulink, explain why there are seemingly 15 equations of motion despite the full state vector being defined as 12-dimensional.
 %[text] ```
-%[text] Answer:
+%[text] Write your answer here...
 %[text] ```
 %%
 %[text] ### 2.1.1 Implementation of the Equations of Motion using a MATLAB function block
