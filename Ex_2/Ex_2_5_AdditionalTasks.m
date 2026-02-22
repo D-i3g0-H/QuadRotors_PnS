@@ -3,7 +3,7 @@
 %[text] - This is implemented most easily by using the "Random Number" block (found in the "Sources" category) in Simulink to inject a vector with independent samples.
 %[text] - The measurement noise should be added in a manner that allows you to quickly select between simulating the vehicle with and without noise. \
 %[text] ```
-%[text] Provide your solution in the Simulink Model. Feel free to run the model via the app to visualize the results.
+%[text] Provide your solution in the Simulink Model. 
 %[text] ```
 %[text] How is the step change tracking performance affected by the amplitude of the added noise? Is the vehicle's performance more sensitive to noise on particular measurements?
 %[text] Is zero-mean white noise a realistic assumption? What other types of noise might exist for particular measurements.
@@ -17,7 +17,7 @@
 %[text] - For the propellers used on the Crazyflie 2.0, this static \\integer command -to- thrust" conversion was identified as: thrust $\\mathrm{thrust \[N\] = thrust\_{max} ( 1.3385\\cdot 10^{-10} \\ cmd^2 + 6.4879\\cdot 10^{-6} \\ cmd)}$ where cmd is the integer command in the range \[0 - 65535\], and thrust\_{max} is the maximum thrust in Newtons produced by the propeller at cmd = 65535.
 %[text] - The purpose of including this conversion in the simulation is so that the simulated controller architecture and tuning matches that of the real-world system. \
 %[text] ```
-%[text] to be implemented in Simulink...
+%[text] Provide your solution in the Simulink Model.
 %[text] ```
 %[text] 
 
