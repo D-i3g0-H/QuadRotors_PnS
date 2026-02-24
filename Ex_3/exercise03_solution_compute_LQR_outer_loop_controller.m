@@ -27,7 +27,7 @@ function [ K_lqr_continuous_time , K_lqr_discrete_time ] = exercise03_solution_c
     % Specify the quadratic cost matrices
     % J = Sum {x'Qx + u'Ru + 2*x'Nu}
     
-    Q_outer_loop = diag([1, 1, 0.5, 0.5, 0.5, 0.5, 1, 1, 1]);
+    Q_outer_loop = diag([0, 0, 0, 0., 0., 0., 0, 0, 0]);
     R_outer_loop = diag([1, 1, 1, 1]);
     S_outer_loop = zeros(nx,nu);
 
