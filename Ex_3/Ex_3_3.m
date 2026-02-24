@@ -1,5 +1,5 @@
-%[text] # LQR control for (x, y) position
-%[text] ## Theory
+%[text] ## 3.3 LQR control for (x,y) position
+%[text] ## 3.3.1 Theory
 %[text] The infinite-horizon LQR design equations for a **continuous-time linear-time-invariant (LTI) system** are (taken directly from the Control Systems I lecture notes):
 %[text] ![](text:image:9d3c)
 %[text] where (1a) is the Riccati equation to solve for P∞, (1b) is the control law to implement, and (1c) is the state-feedback gain matrix.
@@ -7,7 +7,7 @@
 %[text] ![](text:image:2ca1)
 %[text] where the subscript $(\\cdot )\_D$ indicates that the quantities are for a discrete-time system.
 %%
-%[text] ## Task
+%[text] ## 3.3.2 Task
 %[text] Use the linear system matrices to design an infinte-horizon LQR controller state-feedback matrix and implement this in the template Simulink model provided.
 %[text] You will need to choose the Q and R cost function matrices to achieve the desired flight performance of your N-rotor vehicle. The infinite-horizon LQR cost function is:
 %[text] $J\_{\\infty}=\\int\\limits\_{0}^{\\infty} \\Bigl(x(t)^TQ \\ x(t) +u(t)^T R \\ u(t) \\Bigr) dt\n$
@@ -27,6 +27,7 @@ edit exercise03_solution_compute_LQR_outer_loop_controller
 %[text] The LQR gains for **X** and **Y** are contained in the LQR gain matrix block named **LQR gain matrix for (x,y)**. Extract the relevant gain values obtained from your LQR computation and enter them into this block. Save the Simulink model, and then run the simulation.
 %[text] Ensure that any gain variables you use are correctly defined and available in the **MATLAB Workspace**, so the block can access them during simulation.
 %[text] ![](text:image:0d55)
+load_system('exercise03_simulation_model_template') 
 open_system("exercise03_simulation_model_template/Controller/outer control loop",'tab')
 %[text] 
 

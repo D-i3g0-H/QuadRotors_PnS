@@ -1,5 +1,5 @@
-%[text] # Rotation of controller error (approximately) into body frame
-%[text] ## Motivation
+%[text] ## 3.1 Rotation of controller error (approximately) into body frame
+%[text] ## 3.1.1 Motivation
 %[text] Open the PS\_Quadcopter\_Lab App and load the template Simulink model from this exercise
 %[text] ![](text:image:524b)
 PS_Quadcopter_Lab_app %[output:3f99e038]
@@ -13,7 +13,7 @@ PS_Quadcopter_Lab_app %[output:3f99e038]
 %%
 %[text] Note: To prevent unintended changes to your model, please close the app before continuing.
 %%
-%[text] ## Task
+%[text] ## 3.1.2 Task
 %[text] The goal of this task is to derive and implement a simple rotation of the controller errors into the body frame and remedy the $(x, y)$ tracking performance.
 %[text] - Assuming the roll and pitch angles are zero, derive the transformation of the $(p\_x, p\_y)$ and $(\\dot{p}\_x, \\dot{p}\_y)$ errors into the body frame. Implement this transformation in the `“outer control loop”` sub-system of your Simulink model in the MATLAB Function block named `“rotate xy inertial to body”`. \
 % implement your solution in the following MATLAB function block
