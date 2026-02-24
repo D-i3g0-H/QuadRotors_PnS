@@ -45,7 +45,7 @@ open_system('exercise02_simulation_model_template_R2025b/Controller','tab')
 PS_Quadcopter_Lab_app; %[output:37696fd9]
 %[text] The sample rates of the rate transition blocks can be adjusted using the elements in the exercise panel. For your reference:
 %[text] - "Controller Gains": Selects the correct "LQR gain" block for the specified frequency.
-%[text] - "Controller Speed \[Hz\]": Sets the computing rate for the LQR gain block (rate transition block). 
+%[text] - "Controller Speed \[Hz\]": Sets the computing rate for the LQR gain block (rate transition block).
 %[text] - "Sensors" defines the sample rate of full-state "sensor" measurements. \
 %%
 %[text] Investigate the impact of the signal and controller frequencies. First use the Controller LQR Gains for 200 Hz.
@@ -57,7 +57,7 @@ PS_Quadcopter_Lab_app; %[output:37696fd9]
 %[text] ```
 %[text] Test out the following two combinations:
 %[text] - set the controller computations to a frequency of 10Hz, but use the controller parameters designed for 200Hz
-%[text] - set the controller computations to a frequency of 10Hz, but use the controller parameters designed for 20Hz. 
+%[text] - set the controller computations to a frequency of 10Hz, but use the controller parameters designed for 20Hz.
 %[text] - set the controller computations to a frequency of 200 Hz, but use the controller parameters designed for 20 Hz.  \
 %[text] Explain the results using intuitive arguments.
 %[text] ```
