@@ -21,15 +21,15 @@
 %[text] Based on your derivation, answer the following:
 %[text] What happens to the $\\frac{d}{d\\vec{\\psi}}\\ddot{\\vec{p}}$ block if we linearise about a non-zero yaw for the equilibrium point, denoted $\\alpha\_{hover}$?
 %[text] ```
-%[text] Answer:
+%[text] Write your answer here...
 %[text] ```
 %[text] Provide an intuitive explanation for why the blocks $\\frac{d}{d\\vec{\\psi}}\\ddot{\\vec{\\psi}}$ and $\\frac{d}{d\\dot{\\vec{\\psi}}}\\ddot{\\vec{\\psi}}$ are identically zero despite the non-trivial dependencies.
 %[text] ```
-%[text] Answer:
+%[text] Write your answer here...
 %[text] ```
 %[text] The sparse structure of the continuous-time linear system matrices, i.e., $A$ and $B$, can be separated into smaller independent systems. What is the state vector for each of these independent systems?
 %[text] ```
-%[text] Answer:
+%[text] Write your answer here...
 %[text] ```
 %[text] 
 

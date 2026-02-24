@@ -15,8 +15,8 @@
 %[text] ```
 %%
 %[text] Validate the correct behavior of the new controller (make sure that the correct model is loaded):
-load_system('exercise02_simulation_model_template_R2025b')   
-sim('exercise02_simulation_model_template_R2025b')
+load_system('exercise02_simulation_model_template')   
+sim('exercise02_simulation_model_template')
 sim_out = get_sim_data(logsout);
 plot_sim_data(sim_out) %[output:4dd7db47]
 %%

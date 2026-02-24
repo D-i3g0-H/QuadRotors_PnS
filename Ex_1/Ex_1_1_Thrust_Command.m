@@ -13,8 +13,8 @@
 %[text] In this exercise, you will implement a simplified version of a flight controller that generates a PWM signal from a thrust command.
 %[text] ### 1.1.1 Check the Simulation Configuration
 %[text] To open the Simulink model run this code section below:
-load_system('ThrustCommand')              
-open_system('ThrustCommand','tab')
+load_system('exercise01_simulation_model_template')              
+open_system('exercise01_simulation_model_template','tab')
 %[text] Then go to "Model Settings" in the modeling tab and verify that the solver has the following configuration:
 %[text] ![](text:image:48e0)
 %[text] ### 1.1.2 Constant Pulse Signal
