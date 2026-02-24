@@ -12,7 +12,7 @@
 checkInstallation %[output:52ff4b99]
 %%
 %[text] ## Preparation
-%[text] - Complete the indicated modules of the Simulink Onramp \
+%[text] - Complete the modules of the Simulink Onramp indicated on the slides \
 %%
 %[text] ## Scripts with individual tasks
 %[text] - [Generating a PWM signal for Thrust](file:.\Ex_1_1_Thrust_Command.m) \
